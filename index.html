@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #121212;
+            color: #f7afaf;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: whitesmoke;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #a25f5f;
+            padding-bottom: 10px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            color: #00bfff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h1, h2 {
+            color: #00bfff;
+        }
+        nav a:hover{
+            color: #ffffff;
+        }
+        ul li{
+            margin: 10px 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        nav a:hover{
+            color: gold;
+            transition: 0.3s;
+        }
+        .call-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.call-btn:hover {
+    background-color: #1EBE5D;
+}
+.slideshow {
+    width: 400px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.slides {
+    width: 100%;
+    height: 250px;
+    display: none;
+    border-radius: 10px;
+}
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2563EB;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Navigation Links -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Home Section -->
+         <section id="home">
+    <div class="home">
+        <div class="intro">
+            <h2>Hi, I'm Mark</h2>
+        </div>
+  <div class="profile">
+            <img src="C:\Users\Owner-PC\OneDrive\Desktop\projectory\port4.jpg" alt="Mark's Profile Picture">
+        </div>
+</section>
+        <section id="home">
+            <p>Welcome to my basic website portfolio. I am glad you are here.</p>
+          <p>Welcome to my portfolio. I am a Computer Science student passionate about web development and technology.</p>
+        </section>
+        <div class="slideshow">
+    <img class="slides" src="C:\Users\Owner-PC\OneDrive\Desktop\projectory\port1.jpg" alt="Image 1">
+    <img class="slides" src="C:\Users\Owner-PC\OneDrive\Desktop\projectory\port2.jpg" alt="Image 2">
+    <img class="slides" src="C:\Users\Owner-PC\OneDrive\Desktop\projectory\port3.jpg" alt="Image 3">
+</div>
+
+
+        <!-- About Section -->
+        <section id="about">
+            <h2><u>About Me</u></h2>
+            <p>I am looking to share my work. I enjoy learning new skills, working on projects, and building things online.</p>
+            <h3>My Skills:</h3>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>Problem Solving</li>
+                <li>Organization</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2><u>Contact</u></h2>
+            <p>You can reach me by email,my github profile or through the contacts below:</p>
+            <ul>
+                <li>Email: </li>
+                <li>My Email: <a href="mail to:markwaweru243@gmail.com" class="call-btn">📧 Email</a></li>
+               <li>Github Profile: <a href="https://github.com/markcsc6094725-lab" class="call-btn">💻 GitHub</a></li>
+               <li>My Phone Number: <a href="tel:+254712345678" class="call-btn">📞 Call</a></li>
+               </ul>
+        </section>
+
+    </div>
+    <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slides");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Changes image every 3 seconds
+}
+</script>
+
+</body>
+</html>
+
+
